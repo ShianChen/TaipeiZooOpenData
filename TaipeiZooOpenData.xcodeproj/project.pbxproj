@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E11A56482130D9ADAA4C1A3 /* Pods_TaipeiZooOpenData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E22442AD306052CC34D4923 /* Pods_TaipeiZooOpenData.framework */; };
+		BADB401521796CBE0002B264 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB401421796CBE0002B264 /* AppDelegate.m */; };
+		BADB401821796CBE0002B264 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB401721796CBE0002B264 /* ViewController.m */; };
+		BADB401B21796CBE0002B264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB401921796CBE0002B264 /* Main.storyboard */; };
+		BADB401D21796CBF0002B264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADB401C21796CBF0002B264 /* Assets.xcassets */; };
+		BADB402021796CBF0002B264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB401E21796CBF0002B264 /* LaunchScreen.storyboard */; };
+		BADB402321796CBF0002B264 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB402221796CBF0002B264 /* main.m */; };
+		BADB402D21796CBF0002B264 /* TaipeiZooOpenDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB402C21796CBF0002B264 /* TaipeiZooOpenDataTests.m */; };
+		BADB403821796CBF0002B264 /* TaipeiZooOpenDataUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB403721796CBF0002B264 /* TaipeiZooOpenDataUITests.m */; };
+		BADB404E217979C20002B264 /* WebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB404D217979C20002B264 /* WebManager.m */; };
+		BADB4051217979D80002B264 /* ZooDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB4050217979D80002B264 /* ZooDataModel.m */; };
+		BADB4054217979E50002B264 /* ZooData.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB4053217979E50002B264 /* ZooData.m */; };
+		BADB40582179AE1F0002B264 /* ZooDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB40562179AE1F0002B264 /* ZooDataCell.m */; };
+		ECF4A740637AD567269A2951 /* Pods_TaipeiZooOpenDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEF6342F01A6D36C9831AA0 /* Pods_TaipeiZooOpenDataTests.framework */; };
+		F025722533FADA6DE38934DE /* Pods_TaipeiZooOpenDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D944747133DCB374A83CB833 /* Pods_TaipeiZooOpenDataUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BADB402921796CBF0002B264 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BADB400821796CBE0002B264 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BADB400F21796CBE0002B264;
+			remoteInfo = TaipeiZooOpenData;
+		};
+		BADB403421796CBF0002B264 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BADB400821796CBE0002B264 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BADB400F21796CBE0002B264;
+			remoteInfo = TaipeiZooOpenData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B02A94DD79B7301D223C1CF /* Pods-TaipeiZooOpenDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenDataUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenDataUITests/Pods-TaipeiZooOpenDataUITests.release.xcconfig"; sourceTree = "<group>"; };
+		286514F7D41978AA03895C54 /* Pods-TaipeiZooOpenDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenDataTests/Pods-TaipeiZooOpenDataTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E22442AD306052CC34D4923 /* Pods_TaipeiZooOpenData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiZooOpenData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEF6342F01A6D36C9831AA0 /* Pods_TaipeiZooOpenDataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiZooOpenDataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842176FD6311260F3EB43851 /* Pods-TaipeiZooOpenDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenDataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenDataTests/Pods-TaipeiZooOpenDataTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3C366DEF38497BCA76E72F9 /* Pods-TaipeiZooOpenData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenData.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenData/Pods-TaipeiZooOpenData.release.xcconfig"; sourceTree = "<group>"; };
+		B21B184A38EAD36DA0082D05 /* Pods-TaipeiZooOpenData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenData/Pods-TaipeiZooOpenData.debug.xcconfig"; sourceTree = "<group>"; };
+		BADB401021796CBE0002B264 /* TaipeiZooOpenData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaipeiZooOpenData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADB401321796CBE0002B264 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BADB401421796CBE0002B264 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BADB401621796CBE0002B264 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BADB401721796CBE0002B264 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BADB401A21796CBE0002B264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BADB401C21796CBF0002B264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BADB401F21796CBF0002B264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BADB402121796CBF0002B264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADB402221796CBF0002B264 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BADB402821796CBF0002B264 /* TaipeiZooOpenDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaipeiZooOpenDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADB402C21796CBF0002B264 /* TaipeiZooOpenDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaipeiZooOpenDataTests.m; sourceTree = "<group>"; };
+		BADB402E21796CBF0002B264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADB403321796CBF0002B264 /* TaipeiZooOpenDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaipeiZooOpenDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADB403721796CBF0002B264 /* TaipeiZooOpenDataUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaipeiZooOpenDataUITests.m; sourceTree = "<group>"; };
+		BADB403921796CBF0002B264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADB404821796D470002B264 /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
+		BADB404921796E620002B264 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BADB404C217979C20002B264 /* WebManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebManager.h; sourceTree = "<group>"; };
+		BADB404D217979C20002B264 /* WebManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebManager.m; sourceTree = "<group>"; };
+		BADB404F217979D80002B264 /* ZooDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooDataModel.h; sourceTree = "<group>"; };
+		BADB4050217979D80002B264 /* ZooDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooDataModel.m; sourceTree = "<group>"; };
+		BADB4052217979E50002B264 /* ZooData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooData.h; sourceTree = "<group>"; };
+		BADB4053217979E50002B264 /* ZooData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooData.m; sourceTree = "<group>"; };
+		BADB40552179AE1F0002B264 /* ZooDataCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZooDataCell.h; sourceTree = "<group>"; };
+		BADB40562179AE1F0002B264 /* ZooDataCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZooDataCell.m; sourceTree = "<group>"; };
+		D944747133DCB374A83CB833 /* Pods_TaipeiZooOpenDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiZooOpenDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADDB0112A1AAC8D35C21CF1 /* Pods-TaipeiZooOpenDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenDataUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenDataUITests/Pods-TaipeiZooOpenDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BADB400D21796CBE0002B264 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E11A56482130D9ADAA4C1A3 /* Pods_TaipeiZooOpenData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB402521796CBF0002B264 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF4A740637AD567269A2951 /* Pods_TaipeiZooOpenDataTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB403021796CBF0002B264 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F025722533FADA6DE38934DE /* Pods_TaipeiZooOpenDataUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D734AC08314523EC3D98D31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E22442AD306052CC34D4923 /* Pods_TaipeiZooOpenData.framework */,
+				4DEF6342F01A6D36C9831AA0 /* Pods_TaipeiZooOpenDataTests.framework */,
+				D944747133DCB374A83CB833 /* Pods_TaipeiZooOpenDataUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BADB400721796CBE0002B264 = {
+			isa = PBXGroup;
+			children = (
+				BADB401221796CBE0002B264 /* TaipeiZooOpenData */,
+				BADB402B21796CBF0002B264 /* TaipeiZooOpenDataTests */,
+				BADB403621796CBF0002B264 /* TaipeiZooOpenDataUITests */,
+				BADB401121796CBE0002B264 /* Products */,
+				CEED11CE4CA2FE2D1E573F39 /* Pods */,
+				1D734AC08314523EC3D98D31 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BADB401121796CBE0002B264 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BADB401021796CBE0002B264 /* TaipeiZooOpenData.app */,
+				BADB402821796CBF0002B264 /* TaipeiZooOpenDataTests.xctest */,
+				BADB403321796CBF0002B264 /* TaipeiZooOpenDataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BADB401221796CBE0002B264 /* TaipeiZooOpenData */ = {
+			isa = PBXGroup;
+			children = (
+				BADB404821796D470002B264 /* Definition.h */,
+				BADB401321796CBE0002B264 /* AppDelegate.h */,
+				BADB401421796CBE0002B264 /* AppDelegate.m */,
+				BADB404621796CFE0002B264 /* Controller */,
+				BADB404521796CFE0002B264 /* Model */,
+				BADB404721796CFE0002B264 /* View */,
+				BADB404A21796F450002B264 /* Supporting Files */,
+			);
+			path = TaipeiZooOpenData;
+			sourceTree = "<group>";
+		};
+		BADB402B21796CBF0002B264 /* TaipeiZooOpenDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				BADB402C21796CBF0002B264 /* TaipeiZooOpenDataTests.m */,
+				BADB402E21796CBF0002B264 /* Info.plist */,
+			);
+			path = TaipeiZooOpenDataTests;
+			sourceTree = "<group>";
+		};
+		BADB403621796CBF0002B264 /* TaipeiZooOpenDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BADB403721796CBF0002B264 /* TaipeiZooOpenDataUITests.m */,
+				BADB403921796CBF0002B264 /* Info.plist */,
+			);
+			path = TaipeiZooOpenDataUITests;
+			sourceTree = "<group>";
+		};
+		BADB404521796CFE0002B264 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BADB404C217979C20002B264 /* WebManager.h */,
+				BADB404D217979C20002B264 /* WebManager.m */,
+				BADB404F217979D80002B264 /* ZooDataModel.h */,
+				BADB4050217979D80002B264 /* ZooDataModel.m */,
+				BADB4052217979E50002B264 /* ZooData.h */,
+				BADB4053217979E50002B264 /* ZooData.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BADB404621796CFE0002B264 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BADB401621796CBE0002B264 /* ViewController.h */,
+				BADB401721796CBE0002B264 /* ViewController.m */,
+				BADB40552179AE1F0002B264 /* ZooDataCell.h */,
+				BADB40562179AE1F0002B264 /* ZooDataCell.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BADB404721796CFE0002B264 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BADB401921796CBE0002B264 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BADB404A21796F450002B264 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BADB404921796E620002B264 /* PrefixHeader.pch */,
+				BADB401C21796CBF0002B264 /* Assets.xcassets */,
+				BADB401E21796CBF0002B264 /* LaunchScreen.storyboard */,
+				BADB402121796CBF0002B264 /* Info.plist */,
+				BADB402221796CBF0002B264 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEED11CE4CA2FE2D1E573F39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B21B184A38EAD36DA0082D05 /* Pods-TaipeiZooOpenData.debug.xcconfig */,
+				A3C366DEF38497BCA76E72F9 /* Pods-TaipeiZooOpenData.release.xcconfig */,
+				842176FD6311260F3EB43851 /* Pods-TaipeiZooOpenDataTests.debug.xcconfig */,
+				286514F7D41978AA03895C54 /* Pods-TaipeiZooOpenDataTests.release.xcconfig */,
+				DADDB0112A1AAC8D35C21CF1 /* Pods-TaipeiZooOpenDataUITests.debug.xcconfig */,
+				1B02A94DD79B7301D223C1CF /* Pods-TaipeiZooOpenDataUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BADB400F21796CBE0002B264 /* TaipeiZooOpenData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADB403C21796CBF0002B264 /* Build configuration list for PBXNativeTarget "TaipeiZooOpenData" */;
+			buildPhases = (
+				A689547056C6589A3219A1EB /* [CP] Check Pods Manifest.lock */,
+				BADB400C21796CBE0002B264 /* Sources */,
+				BADB400D21796CBE0002B264 /* Frameworks */,
+				BADB400E21796CBE0002B264 /* Resources */,
+				C2176A3AA903FFA583886B66 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaipeiZooOpenData;
+			productName = TaipeiZooOpenData;
+			productReference = BADB401021796CBE0002B264 /* TaipeiZooOpenData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BADB402721796CBF0002B264 /* TaipeiZooOpenDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADB403F21796CBF0002B264 /* Build configuration list for PBXNativeTarget "TaipeiZooOpenDataTests" */;
+			buildPhases = (
+				1AC07573D51D3A7C9731BCE7 /* [CP] Check Pods Manifest.lock */,
+				BADB402421796CBF0002B264 /* Sources */,
+				BADB402521796CBF0002B264 /* Frameworks */,
+				BADB402621796CBF0002B264 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BADB402A21796CBF0002B264 /* PBXTargetDependency */,
+			);
+			name = TaipeiZooOpenDataTests;
+			productName = TaipeiZooOpenDataTests;
+			productReference = BADB402821796CBF0002B264 /* TaipeiZooOpenDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BADB403221796CBF0002B264 /* TaipeiZooOpenDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADB404221796CBF0002B264 /* Build configuration list for PBXNativeTarget "TaipeiZooOpenDataUITests" */;
+			buildPhases = (
+				68C372E630EFFFD808A134BB /* [CP] Check Pods Manifest.lock */,
+				BADB402F21796CBF0002B264 /* Sources */,
+				BADB403021796CBF0002B264 /* Frameworks */,
+				BADB403121796CBF0002B264 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BADB403521796CBF0002B264 /* PBXTargetDependency */,
+			);
+			name = TaipeiZooOpenDataUITests;
+			productName = TaipeiZooOpenDataUITests;
+			productReference = BADB403321796CBF0002B264 /* TaipeiZooOpenDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BADB400821796CBE0002B264 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = NT30338;
+				TargetAttributes = {
+					BADB400F21796CBE0002B264 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					BADB402721796CBF0002B264 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = BADB400F21796CBE0002B264;
+					};
+					BADB403221796CBF0002B264 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = BADB400F21796CBE0002B264;
+					};
+				};
+			};
+			buildConfigurationList = BADB400B21796CBE0002B264 /* Build configuration list for PBXProject "TaipeiZooOpenData" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BADB400721796CBE0002B264;
+			productRefGroup = BADB401121796CBE0002B264 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BADB400F21796CBE0002B264 /* TaipeiZooOpenData */,
+				BADB402721796CBF0002B264 /* TaipeiZooOpenDataTests */,
+				BADB403221796CBF0002B264 /* TaipeiZooOpenDataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BADB400E21796CBE0002B264 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB402021796CBF0002B264 /* LaunchScreen.storyboard in Resources */,
+				BADB401D21796CBF0002B264 /* Assets.xcassets in Resources */,
+				BADB401B21796CBE0002B264 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB402621796CBF0002B264 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB403121796CBF0002B264 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AC07573D51D3A7C9731BCE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaipeiZooOpenDataTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68C372E630EFFFD808A134BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaipeiZooOpenDataUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A689547056C6589A3219A1EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaipeiZooOpenData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2176A3AA903FFA583886B66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaipeiZooOpenData/Pods-TaipeiZooOpenData-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaipeiZooOpenData/Pods-TaipeiZooOpenData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BADB400C21796CBE0002B264 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB40582179AE1F0002B264 /* ZooDataCell.m in Sources */,
+				BADB4051217979D80002B264 /* ZooDataModel.m in Sources */,
+				BADB404E217979C20002B264 /* WebManager.m in Sources */,
+				BADB4054217979E50002B264 /* ZooData.m in Sources */,
+				BADB401821796CBE0002B264 /* ViewController.m in Sources */,
+				BADB402321796CBF0002B264 /* main.m in Sources */,
+				BADB401521796CBE0002B264 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB402421796CBF0002B264 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB402D21796CBF0002B264 /* TaipeiZooOpenDataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB402F21796CBF0002B264 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB403821796CBF0002B264 /* TaipeiZooOpenDataUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BADB402A21796CBF0002B264 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BADB400F21796CBE0002B264 /* TaipeiZooOpenData */;
+			targetProxy = BADB402921796CBF0002B264 /* PBXContainerItemProxy */;
+		};
+		BADB403521796CBF0002B264 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BADB400F21796CBE0002B264 /* TaipeiZooOpenData */;
+			targetProxy = BADB403421796CBF0002B264 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BADB401921796CBE0002B264 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADB401A21796CBE0002B264 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BADB401E21796CBF0002B264 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADB401F21796CBF0002B264 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BADB403A21796CBF0002B264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BADB403B21796CBF0002B264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BADB403D21796CBF0002B264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B21B184A38EAD36DA0082D05 /* Pods-TaipeiZooOpenData.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TaipeiZooOpenData/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ike.TaipeiZooOpenData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BADB403E21796CBF0002B264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C366DEF38497BCA76E72F9 /* Pods-TaipeiZooOpenData.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TaipeiZooOpenData/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ike.TaipeiZooOpenData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BADB404021796CBF0002B264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 842176FD6311260F3EB43851 /* Pods-TaipeiZooOpenDataTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TaipeiZooOpenDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ike.TaipeiZooOpenDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaipeiZooOpenData.app/TaipeiZooOpenData";
+			};
+			name = Debug;
+		};
+		BADB404121796CBF0002B264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 286514F7D41978AA03895C54 /* Pods-TaipeiZooOpenDataTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TaipeiZooOpenDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ike.TaipeiZooOpenDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaipeiZooOpenData.app/TaipeiZooOpenData";
+			};
+			name = Release;
+		};
+		BADB404321796CBF0002B264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DADDB0112A1AAC8D35C21CF1 /* Pods-TaipeiZooOpenDataUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TaipeiZooOpenDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ike.TaipeiZooOpenDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaipeiZooOpenData;
+			};
+			name = Debug;
+		};
+		BADB404421796CBF0002B264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B02A94DD79B7301D223C1CF /* Pods-TaipeiZooOpenDataUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TaipeiZooOpenDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ike.TaipeiZooOpenDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaipeiZooOpenData;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BADB400B21796CBE0002B264 /* Build configuration list for PBXProject "TaipeiZooOpenData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB403A21796CBF0002B264 /* Debug */,
+				BADB403B21796CBF0002B264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADB403C21796CBF0002B264 /* Build configuration list for PBXNativeTarget "TaipeiZooOpenData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB403D21796CBF0002B264 /* Debug */,
+				BADB403E21796CBF0002B264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADB403F21796CBF0002B264 /* Build configuration list for PBXNativeTarget "TaipeiZooOpenDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB404021796CBF0002B264 /* Debug */,
+				BADB404121796CBF0002B264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADB404221796CBF0002B264 /* Build configuration list for PBXNativeTarget "TaipeiZooOpenDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB404321796CBF0002B264 /* Debug */,
+				BADB404421796CBF0002B264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BADB400821796CBE0002B264 /* Project object */;
+}
