@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [self setupUI:self.data];
+    //[self setupUI:self.data];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -24,10 +24,10 @@
 
 - (void)setupUI:(ZooData *)data {
     self.nameLabel.text = data.name;
-    self.locationLabel.text = data.behavior;
-    self.behaviorLabel.text = data.location;
+    self.locationLabel.text = data.location;
+    self.behaviorLabel.text = data.behavior;
     [self.picImage sd_setImageWithURL:[NSURL URLWithString:data.imgUrl]
-                     placeholderImage:[UIImage imageNamed:@""]];
+                     placeholderImage:[UIImage imageNamed:@"Loading.png"]];
 }
 
 @end

@@ -18,7 +18,9 @@
     self.location = nonEmptyString(dataDictionary[@"A_Location"]);
     
     NSString *behaviorString = nonEmptyString(dataDictionary[@"A_Behavior"]);
-    self.behavior = behaviorString.length == 0 ? @"查無資料" : behaviorString;
+    NSString *interpretationString = nonEmptyString(dataDictionary[@"A_Interpretation"]);
+    interpretationString = interpretationString.length == 0 ? @"查無資料" : interpretationString;
+    self.behavior = behaviorString.length == 0 ? interpretationString : behaviorString;
     self.imgUrl = nonEmptyString(dataDictionary[@"A_Pic01_URL"]);
     
     return self;

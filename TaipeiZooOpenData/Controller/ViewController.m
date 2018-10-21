@@ -10,6 +10,9 @@
 #import "ZooDataModel.h"
 #import "ZooDataCell.h"
 
+static float bigNavigationBarMinH = 50.0f;
+static float bigNavigationBarMaxH = 200.0f;
+
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *headerMessageLabel;
@@ -17,8 +20,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSMutableArray<ZooData *> *zooDatas;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (assign, nonatomic) BOOL isShowLoading;
 @property (assign, nonatomic) BOOL isQuerying;
 @property (strong, nonatomic) UIView *maskView;
+@property (weak, nonatomic) IBOutlet UIView *bigNavigationBar;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bigNavigationBarH;
 
 @end
 
@@ -38,10 +44,10 @@
 
 #pragma mark - Setter
 
-- (void)setIsQuerying:(BOOL)isQuerying {
-    _isQuerying = isQuerying;
+- (void)setIsShowLoading:(BOOL)isQuerying {
+    _isShowLoading = isQuerying;
     self.activityIndicator.hidden = !isQuerying;
-    if (_isQuerying) {
+    if (_isShowLoading) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.view addSubview:self.maskView];
             [self.view bringSubviewToFront:self.activityIndicator];
@@ -70,6 +76,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.isQuerying = NO;
+    self.isShowLoading = NO;
+    
+//    // tableView 偏移20/64适配
+//    if (@available(iOS 11.0, *)) {
+//        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;//UIScrollView也适用
+//    }
+//    else {
+//        self.automaticallyAdjustsScrollViewInsets = NO;
+//    }
+    
     self.zooDatas = [[ZooDataModel sharedInstance] getZooDatas];
     [self queryZooData];
 }
@@ -99,8 +117,23 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"ZooDataCell";
     ZooDataCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.data = self.zooDatas[indexPath.row];
-    //[cell setupUI:self.zooDatas[indexPath.row]];
+    ZooData *data = self.zooDatas[indexPath.row];
+    if (!cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ZooDataCell"
+                                                     owner:self
+                                                   options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    if (indexPath.row % 2 == 0) {
+        cell.backgroundColor = [UIColor colorWithWhite:252.0f / 255.0f alpha:1.0f];
+    }
+    else {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [cell setupUI:data];
     return cell;
 }
 
@@ -110,22 +143,57 @@
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return UITableViewAutomaticDimension;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+//    return UITableViewAutomaticDimension;
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return UITableViewAutomaticDimension;
+//}
 
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat distanceFromBottom = scrollView.contentSize.height/5*3/*全部高度的5分之3*/ - scrollView.contentOffset.y;
-    if (distanceFromBottom < scrollView.frame.size.height) {
+    CGFloat toQueryH = scrollView.contentSize.height/5*3/*全部高度的5分之3*/ - scrollView.contentOffset.y;
+    if (toQueryH <= scrollView.frame.size.height) {
         [self queryZooData];
     }
+    
+    CGFloat newBigNavigationBarH = MAX(bigNavigationBarMinH,
+                                       self.bigNavigationBarH.constant - scrollView.contentOffset.y);
+    
+    if (newBigNavigationBarH > bigNavigationBarMaxH) {
+        newBigNavigationBarH = bigNavigationBarMaxH;
+    }
+    
+    self.bigNavigationBarH.constant = newBigNavigationBarH;
+    
+    if (newBigNavigationBarH > bigNavigationBarMinH) {
+        //比min大先別動
+        scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, 0);
+    }
+    
+    
+    float newAlpha = 1.0f;
+    if (newBigNavigationBarH == bigNavigationBarMaxH) {
+        newAlpha = 1.0f;
+    }
+    else if (newBigNavigationBarH <= bigNavigationBarMinH) {
+        newAlpha = 0.0f;
+    }
+    else {
+        newAlpha = scrollView.contentOffset.y / bigNavigationBarMaxH;
+        if (newAlpha < 0.5f) {
+            newAlpha = 0.5f;
+        }
+    }
+    
+    self.bigNavigationBar.alpha = newAlpha;
 }
+
+//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+//
+//}
 
 #pragma mark - Action
 
@@ -133,19 +201,29 @@
 #pragma mark - Private
 
 - (void)queryZooData {
+    if (self.isQuerying) {
+        return;
+    }
+    
+    self.isQuerying = YES;
+    
     if (self.zooDatas.count == 0) {
         //第一次出現loading
-        self.isQuerying = YES;
+        self.isShowLoading = YES;
     }
     
     void (^successHandler)(NSDictionary*) = ^(NSDictionary *response) {
+        self.isShowLoading = NO;
         self.isQuerying = NO;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
+        if (response) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }
     };
     
     void (^failHandler)(NSDictionary*) = ^(NSDictionary *response) {
+        self.isShowLoading = NO;
         self.isQuerying = NO;
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"訊息"
                                                                                  message:@"資料有誤"

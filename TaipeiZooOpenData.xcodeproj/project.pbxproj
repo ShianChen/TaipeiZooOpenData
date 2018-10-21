@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		568551FB217B5B000014B8DC /* Loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 568551FA217B5B000014B8DC /* Loading.png */; };
 		9E11A56482130D9ADAA4C1A3 /* Pods_TaipeiZooOpenData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E22442AD306052CC34D4923 /* Pods_TaipeiZooOpenData.framework */; };
 		BADB401521796CBE0002B264 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB401421796CBE0002B264 /* AppDelegate.m */; };
 		BADB401821796CBE0002B264 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB401721796CBE0002B264 /* ViewController.m */; };
@@ -46,6 +47,7 @@
 		286514F7D41978AA03895C54 /* Pods-TaipeiZooOpenDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenDataTests/Pods-TaipeiZooOpenDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E22442AD306052CC34D4923 /* Pods_TaipeiZooOpenData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiZooOpenData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEF6342F01A6D36C9831AA0 /* Pods_TaipeiZooOpenDataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiZooOpenDataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		568551FA217B5B000014B8DC /* Loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading.png; sourceTree = "<group>"; };
 		842176FD6311260F3EB43851 /* Pods-TaipeiZooOpenDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenDataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenDataTests/Pods-TaipeiZooOpenDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3C366DEF38497BCA76E72F9 /* Pods-TaipeiZooOpenData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenData.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenData/Pods-TaipeiZooOpenData.release.xcconfig"; sourceTree = "<group>"; };
 		B21B184A38EAD36DA0082D05 /* Pods-TaipeiZooOpenData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiZooOpenData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiZooOpenData/Pods-TaipeiZooOpenData.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		BADB404A21796F450002B264 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				568551FA217B5B000014B8DC /* Loading.png */,
 				BADB404921796E620002B264 /* PrefixHeader.pch */,
 				BADB401C21796CBF0002B264 /* Assets.xcassets */,
 				BADB401E21796CBF0002B264 /* LaunchScreen.storyboard */,
@@ -335,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568551FB217B5B000014B8DC /* Loading.png in Resources */,
 				BADB402021796CBF0002B264 /* LaunchScreen.storyboard in Resources */,
 				BADB401D21796CBF0002B264 /* Assets.xcassets in Resources */,
 				BADB401B21796CBE0002B264 /* Main.storyboard in Resources */,

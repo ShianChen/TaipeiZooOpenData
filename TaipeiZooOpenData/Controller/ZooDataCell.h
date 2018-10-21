@@ -17,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *behaviorLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *picImage;
-@property (nonatomic, strong) ZooData *data;
+//@property (nonatomic, strong) ZooData *data;
 
-//- (void)setupUI:(ZooData *)data;
+- (void)setupUI:(ZooData *)data;
 @end
 
 NS_ASSUME_NONNULL_END
