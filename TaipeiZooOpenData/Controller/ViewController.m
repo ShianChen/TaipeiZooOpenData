@@ -170,11 +170,10 @@ static float bigNavigationBarMaxH = 200.0f;
     
     if (newBigNavigationBarH > bigNavigationBarMinH) {
         //比min大先別動
-        scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, 0);
+        scrollView.contentOffset = CGPointMake(0.0f, 0.0f);
     }
     
-    
-    float newAlpha = 1.0f;
+    float newAlpha = newBigNavigationBarH / bigNavigationBarMaxH;
     if (newBigNavigationBarH == bigNavigationBarMaxH) {
         newAlpha = 1.0f;
     }
@@ -182,7 +181,7 @@ static float bigNavigationBarMaxH = 200.0f;
         newAlpha = 0.0f;
     }
     else {
-        newAlpha = scrollView.contentOffset.y / bigNavigationBarMaxH;
+        newAlpha = newBigNavigationBarH / bigNavigationBarMaxH;
         if (newAlpha < 0.5f) {
             newAlpha = 0.5f;
         }
@@ -191,9 +190,34 @@ static float bigNavigationBarMaxH = 200.0f;
     self.bigNavigationBar.alpha = newAlpha;
 }
 
-//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    float midH = bigNavigationBarMaxH / 2;
+    float moveY = 0.0f;
+    float newAlpha = 0.0f;
+    if (self.bigNavigationBarH.constant > midH) {
+        moveY = bigNavigationBarMaxH;
+        newAlpha = 1.0f;
+    }
+    else {
+        moveY = bigNavigationBarMinH;
+        newAlpha = 0.0f;
+    }
+    self.bigNavigationBarH.constant = moveY;
+    self.bigNavigationBar.alpha = newAlpha;
+//    void (^animations)(void) = ^{
 //
-//}
+//    };
+//    void (^completion)(BOOL finished) = ^(BOOL finished){
+//        if (finished) {
+//
+//        }
+//    };
+//    [scrollView animateWithDuration:0.2
+//                              delay:0
+//                            options:UIViewAnimationOptionTransitionNone
+//                         animations:animations
+//                         completion:completion];
+}
 
 #pragma mark - Action
 
